@@ -128,13 +128,13 @@ app.get('/lotto', (req, res) => {
 
   if(!numbers) {
     return res
-      .status(200)
+      .status(400)
       .send("numbers is required");
   }
 
   if(!Array.isArray(numbers)) {
     return res
-      .status(200)
+      .status(400)
       .send("numbers must be an array");
   }
 
